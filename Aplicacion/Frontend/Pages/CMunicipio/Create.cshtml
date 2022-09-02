@@ -1,0 +1,42 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.CreateModel
+@{
+    ViewData["Title"] = "Adicionar Municipios";
+}
+<h2>Esta es la Página para Crear</h2>
+
+<div>
+    <hr/>
+    <div>
+        <div>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" Class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Municipio.Id" Class="control-label"></label>
+                    <input asp-for="Municipio.Id" Class="form-control" />
+                    <span asp-valitation-for="Municipio.Id" Class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Municipio.Nombre" Class="control-label"></label>
+                    <input asp-for="Municipio.Nombre" Class="form-control" />
+                    <span asp-valitation-for="Municipio.Nombre" Class="text-danger"> </span>
+                </div>
+
+                <div>
+                    <label asp-for="Municipio.Secretaria" Class="control-label"></label>
+                    <input asp-for="Municipio.Secretaria" Class="form-control" />
+                    <span asp-valitation-for="Municipio.Secretaria" Class="text-danger"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Crear" />
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

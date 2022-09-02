@@ -1,0 +1,40 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de Municipios</h1>
+<p>
+    <a asp-page="Create" class="btn btn-success"> Añadir Municipio Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+           <th>Id</th>
+           <th>Nombre</th>
+           <th>Secretaría</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Muni in Model.Municipios)
+        {
+            <tr>
+                <td>@Muni.Id</td>
+                <td>@Muni.Nombre</td>
+                <td>@Muni.Secretaria</td>
+                /**
+                *! Estas variables serian los datos que Nos traera de la base de datos
+                */
+
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@Muni.Id" class="btn btn-info">Editar</a>
+                    <a asp-page="./Details" asp-route-id="@Muni.Id" class="btn btn-info">Detalles</a>
+                    <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@Muni.Id">Eliminar</a>                
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

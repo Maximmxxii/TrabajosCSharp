@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fpZ+XsSMV6/9YS3e2xnJWQz3Ji3sfdYL4YxR3Kueqd/JsHOrQrMV54+sOvEheL+032EXL4l3iI8o8fxm/yFbyg==",
+  "success": true,
+  "projectFilePath": "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MAXIM\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

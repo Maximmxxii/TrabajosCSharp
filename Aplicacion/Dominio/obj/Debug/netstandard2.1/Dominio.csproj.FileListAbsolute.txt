@@ -1,0 +1,9 @@
+F:\TrabajosC#\Aplicacion\Dominio\bin\Debug\netstandard2.1\Dominio.deps.json
+F:\TrabajosC#\Aplicacion\Dominio\bin\Debug\netstandard2.1\Dominio.dll
+F:\TrabajosC#\Aplicacion\Dominio\bin\Debug\netstandard2.1\Dominio.pdb
+F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.csprojAssemblyReference.cache
+F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfoInputs.cache
+F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfo.cs
+F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.csproj.CoreCompileInputs.cache
+F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.dll
+F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.pdb
