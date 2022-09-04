@@ -28,7 +28,7 @@ namespace Frontend
             //Inyectar el Contexto, se hace una sola vez
             services.AddDbContext<Persistencia.AppContext>();
             /**
-            *!Esto es un comentario de ejemplo luego de hacer Fork
+            *!Este es mi codigo editado
             */
 
             //Inyectar una dependencia por cada interfaz y la clase que la implementa
