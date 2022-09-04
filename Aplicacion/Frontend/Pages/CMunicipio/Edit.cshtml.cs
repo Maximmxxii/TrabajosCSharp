@@ -9,45 +9,44 @@ using Persistencia;
 
 namespace Frontend.Pages.CMunicipio
 {
-    public class DeleteModel : PageModel
+    public class EditModel : PageModel
     {
-        //Atributos
+        //atributos
         private readonly IRMunicipio _repoMunicipio;
 
         [BindProperty]
         public Municipio Municipio {get;set;}
+
         //Metodos
-        public DeleteModel(IRMunicipio repoMunicipio)
+        //Constructor
+        public EditModel(IRMunicipio repoMunicipio)
         {
             this._repoMunicipio = repoMunicipio;
         }
+
         public ActionResult OnGet(int Id)
-        {            
+        {
             Municipio = _repoMunicipio.BuscarMunicipio(Id);
-            if(Municipio == null)
-            {
-                ViewData["Error"] = "Municipio No encontrado";
-                return Page();
-            }
-            else
-            {
-                return Page();
-            }
+            return Page();
         }
 
         public ActionResult OnPost()
         {
-            bool Funciono = _repoMunicipio.EliminarMunicipio(Municipio.Id);
-            if(Funciono)
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
+            bool Funciono = _repoMunicipio.ActualizarMunicipio(Municipio);
+            
+            if(!Funciono)
             {
                 return RedirectToPage("./Index");
             }
             else
             {
-                ViewData["Error"] = "No es posible eliminar este registro";
+                ViewData["Error"] = "Existe un Municipio con el Nombre." + Municipio.Nombre;
                 return Page();
             }
         }
-        
     }
 }

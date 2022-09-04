@@ -81,3 +81,8 @@ F:\TrabajosC#\Aplicacion\Frontend\bin\Debug\netcoreapp3.1\Dominio.dll
 F:\TrabajosC#\Aplicacion\Frontend\bin\Debug\netcoreapp3.1\Persistencia.dll
 F:\TrabajosC#\Aplicacion\Frontend\bin\Debug\netcoreapp3.1\Dominio.pdb
 F:\TrabajosC#\Aplicacion\Frontend\bin\Debug\netcoreapp3.1\Persistencia.pdb
+F:\TrabajosC#\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CMunicipio\Delete.cshtml.g.cs
+F:\TrabajosC#\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CMunicipio\Details.cshtml.g.cs
+F:\TrabajosC#\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CMunicipio\Edit.cshtml.g.cs
+F:\TrabajosC#\Aplicacion\Frontend\bin\Debug\netcoreapp3.1\Humanizer.dll
+F:\TrabajosC#\Aplicacion\Frontend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

@@ -1,0 +1,32 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.DetailsModel
+@{
+    ViewData["Title"] = "Detalles del Municipio";
+}
+
+<h2> Detalles del Municipio</h2>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                
+                <div class="form-group">
+                    <labels asp-for="Municipio.Nombre" Class="control-label"></labels>
+                    <input asp-for="Municipio.Nombre" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <labels asp-for="Municipio.Secretaria"  Class="control-label"></labels>
+                    <input asp-for="Municipio.Secretaria" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <a asp-page="Index" class="btn btn-info">Inicio</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

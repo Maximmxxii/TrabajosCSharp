@@ -22,8 +22,7 @@ namespace Persistencia
 
         public bool CrearMunicipio(Municipio municipio)
         {
-            bool Creado = false;
-            //string Mensaje = "";
+            bool Creado = false;            
             bool Ex = Existe(municipio);
             if(!Ex)
             {
@@ -31,13 +30,11 @@ namespace Persistencia
                 {
                     this._appContext.Municipios.Add(municipio);
                     this._appContext.SaveChanges();
-                    Creado = true;
-                    //Mensaje = "Municipio creado con Exito";
+                    Creado = true;                    
                 }
                 catch (System.Exception)
                 {
-                    Creado = false; 
-                    //Mensaje = "Error en el Proceso, Se hallo Redundancia ";
+                    Creado = false;                     
                 }
             }
             
@@ -80,19 +77,25 @@ namespace Persistencia
         {
             bool Actualizado = false;
             var muni  = this._appContext.Municipios.Find(municipio.Id);
+           
             if (muni != null)
             {
-                try
+                bool Ex = Existe(municipio);
+                if(!Ex)
                 {
-                    muni.Nombre = municipio.Nombre;
-                    muni.Secretaria = municipio.Secretaria;
-                    this._appContext.SaveChanges();
-                    Actualizado = true;
+                    try
+                    {
+                        muni.Nombre = municipio.Nombre;
+                        muni.Secretaria = municipio.Secretaria;
+                        this._appContext.SaveChanges();
+                        Actualizado = true;
+                    }
+                    catch (System.Exception)
+                    {
+                        Actualizado = false;
+                    }    
                 }
-                catch (System.Exception)
-                {
-                    Actualizado = false;
-                }
+                
                 
             }
             return Actualizado;

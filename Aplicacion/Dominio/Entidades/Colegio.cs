@@ -23,7 +23,14 @@ namespace Dominio
         [DataType(DataType.PhoneNumber)]
         public string Telefono  {get; set;}
          
+        [Required(ErrorMessage="El campo Direccion es Obligatorio")]
+        [MaxLength(40,ErrorMessage="El campo {0} no puede tener mas de {1} Caracteres")]
+        [MinLength(7,ErrorMessage="El campo {0} no puede tener menos de {1} Caracteres")]
         public string Direccion  {get; set;}
+
+        [Required(ErrorMessage="El campo Ciudad es Obligatorio")]
+        [MaxLength(40,ErrorMessage="El campo {0} no puede tener mas de {1} Caracteres")]
+        [MinLength(4,ErrorMessage="El campo {0} no puede tener menos de {1} Caracteres")]
         public string Ciudad  {get; set;}
         
 

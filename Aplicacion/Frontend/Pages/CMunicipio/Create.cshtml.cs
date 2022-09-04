@@ -15,6 +15,7 @@ namespace Frontend.Pages.CMunicipio
         //atributos
         private readonly IRMunicipio _repoMunicipio;
 
+        [BindProperty]
         public Municipio Municipio {get;set;}
 
         //Metodos
@@ -29,25 +30,26 @@ namespace Frontend.Pages.CMunicipio
         {
             return Page();
         }
+
         public ActionResult OnPost()
         {
+            //Validamos los datos que se están ingresando.
             if(!ModelState.IsValid)
             {
                 return Page();
             }
-            bool Funciono = _repoMunicipio.CreaMunicipio(Municipio);
+
+            bool Funciono = _repoMunicipio.CrearMunicipio(Municipio);
+
             if(Funciono)
             {
                 return RedirectToPage("./Index");
             }
             else
             {
-                @ViewData["Error"] ="Ya existe un municipio con ese nombre";
-                
+                ViewData["Error"] =("Ya existe un municipio con el nombre:" + Municipio.Nombre);    
+                return Page();            
             }
-        }
-        public void OnGet()
-        {
-        }
+        }        
     }
 }
