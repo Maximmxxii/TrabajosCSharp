@@ -7,3 +7,12 @@ F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfo.c
 F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.csproj.CoreCompileInputs.cache
 F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.dll
 F:\TrabajosC#\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.pdb
+F:\TrabajosCSharp\Aplicacion\Dominio\bin\Debug\netstandard2.1\Dominio.deps.json
+F:\TrabajosCSharp\Aplicacion\Dominio\bin\Debug\netstandard2.1\Dominio.dll
+F:\TrabajosCSharp\Aplicacion\Dominio\bin\Debug\netstandard2.1\Dominio.pdb
+F:\TrabajosCSharp\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.csprojAssemblyReference.cache
+F:\TrabajosCSharp\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfoInputs.cache
+F:\TrabajosCSharp\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfo.cs
+F:\TrabajosCSharp\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.csproj.CoreCompileInputs.cache
+F:\TrabajosCSharp\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.dll
+F:\TrabajosCSharp\Aplicacion\Dominio\obj\Debug\netstandard2.1\Dominio.pdb

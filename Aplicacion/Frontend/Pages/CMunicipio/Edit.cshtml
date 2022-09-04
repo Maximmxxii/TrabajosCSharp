@@ -12,7 +12,9 @@
     <div class="row">
         <div class="col-md-4">
             <form method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                //Todo este Formulario va a hacer uso del asp-validation-summary, 
+                //para hacer validaciones del modelo de data_annotations
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>//este div se usa para validar datos (Create and Update)
 
                 <input type="hidden" asp-for="Municipio.Id" />
 

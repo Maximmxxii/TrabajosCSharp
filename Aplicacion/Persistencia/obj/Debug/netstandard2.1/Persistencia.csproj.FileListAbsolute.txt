@@ -10,3 +10,15 @@ F:\TrabajosC#\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Dominio.pdb
 F:\TrabajosC#\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csproj.CopyComplete
 F:\TrabajosC#\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.dll
 F:\TrabajosC#\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.pdb
+F:\TrabajosCSharp\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Persistencia.deps.json
+F:\TrabajosCSharp\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Persistencia.dll
+F:\TrabajosCSharp\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Persistencia.pdb
+F:\TrabajosCSharp\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Dominio.dll
+F:\TrabajosCSharp\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Dominio.pdb
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csprojAssemblyReference.cache
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.AssemblyInfoInputs.cache
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.AssemblyInfo.cs
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csproj.CoreCompileInputs.cache
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csproj.CopyComplete
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.dll
+F:\TrabajosCSharp\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.pdb

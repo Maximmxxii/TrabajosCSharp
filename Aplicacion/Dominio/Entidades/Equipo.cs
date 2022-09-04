@@ -8,15 +8,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Dominio
 {
     public class Equipo
-    {
-        /*Id
-        Nombre
-        Disciplina
-        Ciudad
-        Categoria
-        Tecnico
-        PatrocinadorId
-        */
+    {        
+        public int Id { get; set; }
+
+        public string Nombre { get; set; }
+        public string Disciplina { get; set; }
+        public string Ciudad { get; set; }
+        public string Categoria { get; set; }
+        public Entrenador Tecnico { get; set;}
+        public int PatrocinadorId { get; set; }
+        
         /**
         *! Propiedad Navigacional
         */

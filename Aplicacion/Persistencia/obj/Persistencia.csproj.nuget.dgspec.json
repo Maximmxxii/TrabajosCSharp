@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\TrabajosC#\\Aplicacion\\Persistencia\\Persistencia.csproj": {}
+    "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\Persistencia.csproj": {}
   },
   "projects": {
-    "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj": {
+    "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj",
+        "projectPath": "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\MAXIM\\.nuget\\packages\\",
-        "outputPath": "F:\\TrabajosC#\\Aplicacion\\Dominio\\obj\\",
+        "outputPath": "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MAXIM\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -60,14 +60,14 @@
         }
       }
     },
-    "F:\\TrabajosC#\\Aplicacion\\Persistencia\\Persistencia.csproj": {
+    "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\TrabajosC#\\Aplicacion\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "F:\\TrabajosC#\\Aplicacion\\Persistencia\\Persistencia.csproj",
+        "projectPath": "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\Persistencia.csproj",
         "packagesPath": "C:\\Users\\MAXIM\\.nuget\\packages\\",
-        "outputPath": "F:\\TrabajosC#\\Aplicacion\\Persistencia\\obj\\",
+        "outputPath": "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MAXIM\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -81,8 +81,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj": {
-                "projectPath": "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj"
+              "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj": {
+                "projectPath": "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj"
               }
             }
           }

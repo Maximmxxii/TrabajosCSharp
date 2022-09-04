@@ -5805,11 +5805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\TrabajosC#\\Aplicacion\\Frontend\\Frontend.csproj",
+      "projectUniqueName": "F:\\TrabajosCSharp\\Aplicacion\\Frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "F:\\TrabajosC#\\Aplicacion\\Frontend\\Frontend.csproj",
+      "projectPath": "F:\\TrabajosCSharp\\Aplicacion\\Frontend\\Frontend.csproj",
       "packagesPath": "C:\\Users\\MAXIM\\.nuget\\packages\\",
-      "outputPath": "F:\\TrabajosC#\\Aplicacion\\Frontend\\obj\\",
+      "outputPath": "F:\\TrabajosCSharp\\Aplicacion\\Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MAXIM\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5823,11 +5823,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj": {
-              "projectPath": "F:\\TrabajosC#\\Aplicacion\\Dominio\\Dominio.csproj"
+            "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj": {
+              "projectPath": "F:\\TrabajosCSharp\\Aplicacion\\Dominio\\Dominio.csproj"
             },
-            "F:\\TrabajosC#\\Aplicacion\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "F:\\TrabajosC#\\Aplicacion\\Persistencia\\Persistencia.csproj"
+            "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "F:\\TrabajosCSharp\\Aplicacion\\Persistencia\\Persistencia.csproj"
             }
           }
         }

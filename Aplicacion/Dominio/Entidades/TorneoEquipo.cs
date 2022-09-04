@@ -12,8 +12,8 @@ namespace Dominio
     {
         public int TorneoId { get; set; }
         public int EquipoId { get; set; }
-        public Torneo Torneo {get; set;}
-        public Equipo Equipo {get;set;}
+        //public Torneo Torneos {get; set;}
+        //public Equipo Equipos {get;set;}
 
         
     }

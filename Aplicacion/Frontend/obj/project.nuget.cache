@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KbjICt8/OfBkBW0sUYG2thuLHSHZ6THp65/YAjV/7foTpgxC3WVFgcUyvs3i3lvrJxkU4YFxmIA5SY5BICe/+g==",
+  "dgSpecHash": "MFYCfQuHnKvjyVFbmHNTVYe4Vf8H9kg4F5QgaS7ofJy/c1yp0UJf+EciF+lVtCMSWCKc50Vv+gJHgyErXtIuiw==",
   "success": true,
-  "projectFilePath": "F:\\TrabajosC#\\Aplicacion\\Frontend\\Frontend.csproj",
+  "projectFilePath": "F:\\TrabajosCSharp\\Aplicacion\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MAXIM\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MAXIM\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
