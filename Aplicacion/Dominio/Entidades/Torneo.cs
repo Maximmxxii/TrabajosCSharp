@@ -45,7 +45,7 @@ namespace Dominio
         /**
         *! Propiedad Navigacional Para TorneoEquipo
         */
-        public List<TorneoEquipo> TorneosXEquipos {get; set;}
+        //public List<TorneoEquipo> TorneosXEquipos {get; set;}
 
         /**
         *! Propiedad Navigacional Para Escenarios

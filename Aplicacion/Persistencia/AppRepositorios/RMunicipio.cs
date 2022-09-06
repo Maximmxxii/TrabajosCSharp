@@ -11,7 +11,7 @@ namespace Persistencia
         */
         private readonly AppContext _appContext;
 
-         /**
+        /**
         *? Metodos 
         */
         public RMunicipio(AppContext appContext)
@@ -76,8 +76,7 @@ namespace Persistencia
         public bool ActualizarMunicipio(Municipio municipio)
         {
             bool Actualizado = false;
-            var muni  = this._appContext.Municipios.Find(municipio.Id);
-           
+            var muni  = this._appContext.Municipios.Find(municipio.Id);           
             if (muni != null)
             {
                 bool Ex = Existe(municipio);
@@ -92,13 +91,12 @@ namespace Persistencia
                     }
                     catch (System.Exception)
                     {
-                        Actualizado = false;
+                        return Actualizado;
                     }    
                 }
-                
-                
-            }
-            return Actualizado;
+            }    
+            
+            return Actualizado;        
         }
 
         public IEnumerable<Municipio> ListarMunicipios()

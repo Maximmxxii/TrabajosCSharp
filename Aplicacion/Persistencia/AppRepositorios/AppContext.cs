@@ -17,17 +17,17 @@ namespace Persistencia
         public DbSet<Equipo> Equipos {get;set;}
         public DbSet<Escenario> Escenarios {get;set;}
         public DbSet<Juez> Jueces {get;set;}
-        public DbSet<TorneoEquipo> TorneosEquipos {get;set;}
+        //public DbSet<TorneoEquipo> TorneosEquipos {get;set;}
         //Metodo para crear la BD si no Existe, con una sobrecarga      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {   //le decimos al OptionsBuilder que use el SqlServer
-                optionsBuilder.UseSqlServer("Data Source = DIEGOFERCHO; Initial Catalog = BDGestionEventos; Integrated Security = True");
-                /**
-                *!La instruccion Intregrated Security = True Nos conecta a la BD con nuestro usuario de Windows.
-                */
+                optionsBuilder.UseSqlServer("Data Source = DIEGOFERCHO; Initial Catalog = BDGestionEventos; Integrated Security = True");               
             }
+             /**
+             *!La instruccion Intregrated Security = True Nos conecta a la BD con nuestro usuario de Windows.
+             *///Todo este Formulario va a hacer uso del asp-validation-summary, //para hacer validaciones del modelo de data_annotations //este div se usa para validar datos (Create and Update)
         }
 
     }

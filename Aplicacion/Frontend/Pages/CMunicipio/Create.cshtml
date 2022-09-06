@@ -11,24 +11,18 @@
     <div class="row">
         <div class="col-md-4">
             <form method="post">
-                <div asp-validation-summary="ModelOnly" Class="text-danger"></div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form-group">
-                    <label asp-for="Municipio.Id" Class="control-label"></label>
-                    <input asp-for="Municipio.Id" Class="form-control" />
-                    <span asp-valitation-for="Municipio.Id" Class="text-danger"> </span>
+                    <label asp-for="Municipio.Nombre" class="control-label"></label>
+                    <input asp-for="Municipio.Nombre" class="form-control" />
+                    <span asp-validation-for="Municipio.Nombre" class="text-danger"> </span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Municipio.Nombre" Class="control-label"></label>
-                    <input asp-for="Municipio.Nombre" Class="form-control" />
-                    <span asp-valitation-for="Municipio.Nombre" Class="text-danger"> </span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="Municipio.Secretaria" Class="control-label"></label>
-                    <input asp-for="Municipio.Secretaria" Class="form-control" />
-                    <span asp-valitation-for="Municipio.Secretaria" Class="text-danger"> </span>
+                    <label asp-for="Municipio.Secretaria" class="control-label"></label>
+                    <input asp-for="Municipio.Secretaria" class="form-control" />
+                    <span asp-validation-for="Municipio.Secretaria" class="text-danger"> </span>
                 </div>
                 
                 <div class="form-group">

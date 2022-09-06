@@ -45,7 +45,7 @@ namespace Frontend.Pages.CMunicipio
             }
             else
             {
-                ViewData["Error"] = "Existe un Municipio con el Nombre." + Municipio.Nombre;
+                ViewData["Error"] = "Existe un Municipio con el Nombre:  " + Municipio.Nombre;
                 return Page();
             }
         }

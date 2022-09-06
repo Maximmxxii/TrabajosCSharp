@@ -26,6 +26,6 @@ namespace Dominio
         /**
         *! Propiedad Navigacional
         */
-        public List<TorneoEquipo> TorneosxEquipos {get; set;}
+        //public List<TorneoEquipo> TorneosXEquipos {get; set;}
     }
 }

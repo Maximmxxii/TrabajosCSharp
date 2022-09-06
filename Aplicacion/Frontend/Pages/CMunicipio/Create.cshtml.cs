@@ -11,7 +11,6 @@ namespace Frontend.Pages.CMunicipio
 {
     public class CreateModel : PageModel
     {
-
         //atributos
         private readonly IRMunicipio _repoMunicipio;
 

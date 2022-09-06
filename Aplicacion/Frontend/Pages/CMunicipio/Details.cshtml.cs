@@ -14,7 +14,7 @@ namespace Frontend.Pages.CMunicipio
         //atributos
         private readonly IRMunicipio _repoMunicipio;
 
-        //[BindProperty]
+        [BindProperty]
         public Municipio Municipio {get;set;}
 
         //Metodos
@@ -24,9 +24,9 @@ namespace Frontend.Pages.CMunicipio
             this._repoMunicipio = repoMunicipio;
         }
 
-        public ActionResult OnGet()
+        public ActionResult OnGet(int Id)
         {
-            Municipio = _repoMunicipio.BuscarMunicipio(Municipio.Id);
+            Municipio = _repoMunicipio.BuscarMunicipio(Id);
             return Page();
         }
     }

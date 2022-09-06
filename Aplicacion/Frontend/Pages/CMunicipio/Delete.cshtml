@@ -7,10 +7,10 @@
 <h2>Eliminar Municipios</h2>
 @if(ViewData["Error"] == null)
 {
-    <h3 class="text-danger">Esta Seguro de Eliminar este Registro?</h3>
+    <h3 class="text-danger" >Esta Seguro de Eliminar este Registro?</h3>
 }else
 {
-    <h4 class="text-danger">@ViewData["Error"]</h4>
+    <h3 class="text-danger" > @ViewData["Error"]</h3>
 }
 
 <div class="form-horizontal">
@@ -19,6 +19,11 @@
         <div class="col-md-4">
             <form method="post">
                 
+                <div class="form-group">
+                    <label asp-for="Municipio.Id" Class="control-label"></label>
+                    <input asp-for="Municipio.Id" Class="form-control" readonly />
+                </div>
+
                 <div class="form-group">
                     <label asp-for="Municipio.Nombre" Class="control-label"></label>
                     <input asp-for="Municipio.Nombre" Class="form-control" readonly />
@@ -33,7 +38,6 @@
                     <input type="submit" value="Eliminar" class="btn btn-danger">
                     <a asp-page="Index" class="btn btn-info">Cancelar</a>
                 </div>
-
             </form>
         </div>
     </div>
