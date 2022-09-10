@@ -1,0 +1,64 @@
+﻿@page
+@model Frontend.Pages.CPatrocinador.DeleteModel
+@{
+    ViewData["title"] ="Eliminar Patrocinadores";
+}
+
+<h2>Eliminar Patrocinadores</h2>
+@if(ViewData["Error"] == null)
+{
+    <h3 class="text-danger" >Esta Seguro de Eliminar este Registro?</h3>
+}else
+{
+    <h3 class="text-danger" > @ViewData["Error"]</h3>
+}
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Id" Class="control-label"></label>
+                    <input asp-for="Patrocinador.Id" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Identificacion" Class="control-label"></label>
+                    <input asp-for="Patrocinador.Identificacion" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Nombre" Class="control-label"></label>
+                    <input asp-for="Patrocinador.Nombre" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Marca" Class="control-label"></label>
+                    <input asp-for="Patrocinador.Marca" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Patrocinador.TipoPersona" Class="control-label"></label>
+                    <input asp-for="Patrocinador.TipoPersona" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Direccion" Class="control-label"></label>
+                    <input asp-for="Patrocinador.Direccion" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Telefono" Class="control-label"></label>
+                    <input asp-for="Patrocinador.Telefono" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Eliminar" class="btn btn-danger">
+                    <a asp-page="Index" class="btn btn-info">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

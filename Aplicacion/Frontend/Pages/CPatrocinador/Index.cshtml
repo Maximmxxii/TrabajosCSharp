@@ -1,4 +1,37 @@
 ﻿@page
 @model Frontend.Pages.CPatrocinador.IndexModel
 @{
+    ViewData["Title"] = "Index";
 }
+
+<h1>Listado de Patrocinadores</h1>
+<p>
+    <a asp-page="Create" class="btn btn-success"> Añadir Patrocinadores Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+           <th>Identificacion</th>
+           <th>Nombre</th>
+           <th>Marca</th>
+           <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pat in Model.Patrocinadores)
+        {
+            <tr>
+                <td>@pat.Identificacion</td>
+                <td>@pat.Nombre</td>
+                <td>@pat.Marca</td>
+                
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@pat.Id" class="btn btn-info">Editar</a>
+                    <a asp-page="./Details" asp-route-id="@pat.Id" class="btn btn-info">Detalles</a>
+                    <a asp-page="./Delete" asp-route-id="@pat.Id" class="btn btn-danger" >Eliminar</a>                
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

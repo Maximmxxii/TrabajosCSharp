@@ -33,6 +33,8 @@ namespace Frontend
 
             //Inyectar una dependencia por cada interfaz y la clase que la implementa
             services.AddScoped<IRMunicipio, RMunicipio>(); 
+            services.AddScoped<IRPatrocinador, RPatrocinador>();
+            services.AddScoped<IREntrenador, REntrenador>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

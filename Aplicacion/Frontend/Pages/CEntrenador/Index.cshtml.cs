@@ -7,26 +7,26 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Dominio;
 using Persistencia;
 
-namespace Frontend.Pages.CPatrocinador
+namespace Frontend.Pages.CEntrenador
 {
     public class IndexModel : PageModel
     {
         //Un Objeto como atributo Para hacer uso de los metodos de las Interfaces
-        private readonly IRPatrocinador _repoPat;
+        private readonly IREntrenador _repoEntre;
 
-        public IEnumerable<Patrocinador> Patrocinadores {get;set;}
+        public IEnumerable<Entrenador> Entrenadores {get;set;}
 
         //metodos
         //constructor
-        public IndexModel(IRPatrocinador repoPat)
+        public IndexModel(IREntrenador repoEntre)
         {
-            this._repoPat = repoPat;
+            this._repoEntre = repoEntre;
         }
 
         //se usa para enviar info al html o forms vacios
         public void OnGet()
         {
-            Patrocinadores = _repoPat.ListarPatrocinadores();
+            Entrenadores = _repoEntre.ListarEntrenadores();
         }
     }
 }

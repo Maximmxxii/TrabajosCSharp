@@ -174,3 +174,7 @@ F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\staticwebassets\Fr
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Frontend.dll
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Frontend.pdb
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Frontend.genruntimeconfig.cache
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CPatrocinador\Index.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CPatrocinador\Create.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CPatrocinador\Delete.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEntrenador\Index.cshtml.g.cs
