@@ -16,6 +16,7 @@ namespace Dominio
         [Required(ErrorMessage="El campo Documento es Obligatorio")]
         [MaxLength(12,ErrorMessage="El campo {0} no puede tener mas de {1} Caracteres")]
         [MinLength(7,ErrorMessage="El campo {0} no puede tener menos de {1} Caracteres")]
+        [RegularExpression("[0-9]*",ErrorMessage="Solo se permiten numeros")] 
         public string Documento { get; set; }
         
         [Required(ErrorMessage="El campo Nombres es Obligatorio")]
@@ -39,11 +40,11 @@ namespace Dominio
         public string ARL { get; set; }
         
         [DataType(DataType.PhoneNumber)]
+        [RegularExpression("[0-9]*",ErrorMessage="Solo se permiten numeros")] 
         public string Celular { get; set; }
         
-        [Required(ErrorMessage="El campo Correo es Obligatorio")]
-        [MaxLength(50,ErrorMessage="El campo {0} no puede tener mas de {1} Caracteres")]
-        [MinLength(9,ErrorMessage="El campo {0} no puede tener menos de {1} Caracteres")]
+        [Required(ErrorMessage="El campo Correo es Obligatorio")]        
+        [DataType(DataType.EmailAddress)]
         public string Correo { get; set; }
         
         [Required(ErrorMessage="El campo Torneo Id es Obligatorio")]

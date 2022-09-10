@@ -13,7 +13,6 @@ namespace Frontend.Pages.CPatrocinador
     {
         //atributos
         private readonly IRPatrocinador _repoPat;
-
         [BindProperty]
         public Patrocinador Patrocinador {get;set;}
 

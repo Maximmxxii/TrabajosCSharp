@@ -15,6 +15,8 @@ namespace Dominio
         
         public string Nombre { get; set; }
         public string Direccion { get; set; }
+
+        [RegularExpression("[0-9]*",ErrorMessage="Solo se permiten numeros")] 
         public int Espectadores { get; set; }
         public int TorneoId { get; set; }
 

@@ -39,7 +39,7 @@ namespace Frontend.Pages.CMunicipio
             
             bool Funciono = _repoMunicipio.ActualizarMunicipio(Municipio);
             
-            if(!Funciono)
+            if(Funciono)
             {
                 return RedirectToPage("./Index");
             }

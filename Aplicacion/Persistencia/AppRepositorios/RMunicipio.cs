@@ -1,6 +1,7 @@
 using Dominio;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Persistencia
 {
@@ -18,7 +19,6 @@ namespace Persistencia
         {
             this._appContext = appContext;
         }
-
 
         public bool CrearMunicipio(Municipio municipio)
         {
@@ -54,8 +54,7 @@ namespace Persistencia
             /**
             *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.
             */
-            var muni  = this._appContext.Municipios.Find(Id);            
-
+            var muni  = this._appContext.Municipios.Find(Id);
             if (muni != null)
             {
                 try
@@ -79,21 +78,18 @@ namespace Persistencia
             var muni  = this._appContext.Municipios.Find(municipio.Id);           
             if (muni != null)
             {
-                bool Ex = Existe(municipio);
-                if(!Ex)
+                try
                 {
-                    try
-                    {
-                        muni.Nombre = municipio.Nombre;
-                        muni.Secretaria = municipio.Secretaria;
-                        this._appContext.SaveChanges();
-                        Actualizado = true;
-                    }
-                    catch (System.Exception)
-                    {
-                        return Actualizado;
-                    }    
+                    muni.Nombre = municipio.Nombre;
+                    muni.Secretaria = municipio.Secretaria;
+                    this._appContext.SaveChanges();
+                    Actualizado = true;
                 }
+                catch (System.Exception)
+                {
+                    return Actualizado;
+                }    
+                
             }    
             
             return Actualizado;        

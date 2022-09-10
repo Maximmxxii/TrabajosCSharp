@@ -1,0 +1,68 @@
+﻿@page
+@model Frontend.Pages.CPatrocinador.EditModel
+@{
+    ViewData["Titulo"] = "Editar Patrocinador";
+}
+
+<h2> Editar Patrocinador</h2>
+<h3 class="text-danger"> @ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <!--Todo este Formulario va a hacer uso del asp-validation-summary, para hacer validaciones del modelo de data_annotations-->
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div><!--Este div se usa para validar datos (Create and Update)-->
+                
+                <input type="hidden" asp-for="Patrocinador.Id" /> <!--No mostraremos el Id para que el user no lo pueda cambiar, pero debemos capturarlo! -->
+                
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Identificacion" class="control-label"></label>
+                    <input asp-for="Patrocinador.Identificacion" class="form-control" />
+                    <span asp-validation-for="Patrocinador.Identificacion" Class="text-danger"> </span><!--Para conectarlo con Validaciones (DataAnotatios) -->
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Patrocinador.Nombre" class="control-label"></label>
+                    <input asp-for="Patrocinador.Nombre" class="form-control" />
+                    <span asp-validation-for="Patrocinador.Nombre" class="text-danger"> </span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Patrocinador.Marca" class="control-label"></label>
+                    <input asp-for="Patrocinador.Marca" class="form-control" />
+                    <span asp-validation-for="Patrocinador.Marca" class="text-danger"> </span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Patrocinador.TipoPersona" class="control-label"></label>
+                    <select asp-for="Patrocinador.TipoPersona" class="form-control" ><!--DropBoxList Creado con HTML5 -->
+                        <option value=""> --Elija Una Opción--</option>
+                        <option value="Natural">Natural</option>
+                        <option value="Juridica">Juridica</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <span asp-validation-for="Patrocinador.TipoPersona" class="text-danger"> </span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Patrocinador.Direccion" class="control-label"></label>
+                    <input asp-for="Patrocinador.Direccion" class="form-control" />
+                    <span asp-validation-for="Patrocinador.Direccion" class="text-danger"> </span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Patrocinador.Telefono" class="control-label"></label>
+                    <input asp-for="Patrocinador.Telefono" class="form-control" />
+                    <span asp-validation-for="Patrocinador.Telefono" class="text-danger"> </span>
+                </div>
+
+                 <div class="form-group">                    
+                    <input type="submit" value="Editar" class="btn btn-info"/>                    
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

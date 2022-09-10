@@ -79,8 +79,8 @@ namespace Persistencia
             if (pat != null)
             {
                 bool Ex = Existe(patrocinador);
-                if(!Ex)
-                {
+                //if(!Ex)
+                //{
                     try
                     {
                         pat.Identificacion = patrocinador.Identificacion;
@@ -96,7 +96,7 @@ namespace Persistencia
                     {
                         return Actualizado;
                     }    
-                }
+                //}
             }    
             
             return Actualizado;        
@@ -112,10 +112,10 @@ namespace Persistencia
             return _appContext.Patrocinadores.ToList();
         }
 
-        private bool Existe(Patrocinador patrocinador)
+        private bool Existe(Patrocinador patro)
         {
             bool Ex = false;
-            var pat = _appContext.Patrocinadores.FirstOrDefault(p => p.Identificacion == p.Identificacion);
+            var pat = _appContext.Patrocinadores.FirstOrDefault(p => p.Identificacion == patro.Identificacion);
             if (pat != null)
             {
                 Ex = true;

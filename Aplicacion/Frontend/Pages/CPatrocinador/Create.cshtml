@@ -33,7 +33,13 @@
 
                  <div class="form-group">
                     <label asp-for="Patrocinador.TipoPersona" class="control-label"></label>
-                    <input asp-for="Patrocinador.TipoPersona" class="form-control" />
+                    <!--DropBoxList Estatico pocas Opciones -->
+                    <select asp-for="Patrocinador.TipoPersona" class="form-control" >
+                        <option value="">--Elija Una Opción--</option>
+                        <option value="Natural">Natural</option>
+                        <option value="Juridica">Juridica</option>
+                        <option value="Otro">Otro</option>
+                    </select>
                     <span asp-validation-for="Patrocinador.TipoPersona" class="text-danger"> </span>
                 </div>
 
