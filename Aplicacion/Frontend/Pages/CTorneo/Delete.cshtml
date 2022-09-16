@@ -1,4 +1,69 @@
 ﻿@page
 @model Frontend.Pages.CTorneo.DeleteModel
 @{
+    ViewData["Title"]="Eliminar Torneo";
 }
+<h2>Eliminar Torneos</h2>
+@if(ViewData["Error"] == null)
+{
+    <h3 class="text-danger" >Esta Seguro de Eliminar este Registro?</h3>
+}else
+{
+    <h3 class="text-danger" > @ViewData["Error"]</h3>
+}
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">             
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <!--Siempre que vayamos a eliminar Un dato, Debemos traer el Id, y dejarlo de manera Hidden (Oculto) para poder usarlo. -->
+                <input type="hidden" asp-for="Torneo.Id"/>
+                
+                <div class="form-group">
+                    <label asp-for="Torneo.Nombre" class="control-label"></label>
+                    <input asp-for="Torneo.Nombre" class="form-control" readonly/>
+                    <span asp-validation-for="Torneo.Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Categoria" class="control-label"></label>
+                    <input asp-for="Torneo.Categoria" class="form-control" readonly/>
+                    <span asp-validation-for="Torneo.Categoria" class="text-danger"></span>                 
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Disciplina" class="control-label">  </label>
+                    <input asp-for="Torneo.Disciplina" class="form-control" readonly/>
+                    <span asp-validation-for="Torneo.Disciplina" class="text-danger"></span>                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.FechaInicial" class="control-label">  </label>
+                    <input asp-for="Torneo.FechaInicial" class="form-control" readonly/>
+                    <span asp-validation-for="Torneo.FechaInicial" class="text-danger"></span>                  
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.FechaFinal" class="control-label">  </label>
+                    <input asp-for="Torneo.FechaFinal" class="form-control" readonly/>
+                    <span asp-validation-for="Torneo.FechaFinal" class="text-danger"></span>                    
+                </div>         
+                
+                <div class="form-group">
+                    <label asp-for="Municipio.Nombre" class="control-label"></label>
+                    <input asp-for="Municipio.Nombre" class="form-control" readonly/>
+                    <span asp-validation-for="Municipio.Nombre" class="text-danger"></span>                                         
+                </div>       
+
+                <div class="form-group">
+                    <input type="submit" value="Eliminar" class="btn btn-info"/>
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

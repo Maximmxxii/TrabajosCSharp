@@ -16,7 +16,7 @@ namespace Frontend.Pages.CTorneo
 
         [BindProperty]
         public IEnumerable<Torneo> Torneos {get;set;}
-        //public List<TorneoView> TorneosView = new List<TorneosView>();
+        public List<TorneoView> TorneosView = new List<TorneoView>();
 
         public IndexModel(IRTorneo repoTor, IRMunicipio repoMun)
         {
@@ -25,9 +25,29 @@ namespace Frontend.Pages.CTorneo
         }
 
         public void OnGet()
-        {
+        { //Traemos todos los municipios y los guardamos en lstMunicipios
             List<Municipio> lstMunicipios= _repoMun.ListarMunicipios1();
-            Torneos= _repoTor.ListarTorneos();
+            Torneos = _repoTor.ListarTorneos();
+            TorneoView tv = null;
+            foreach (var t in Torneos)
+            {
+                tv = new TorneoView();
+                foreach (var m in lstMunicipios)
+                {
+                    if(t.MunicipioId == m.Id)
+                    {
+                        tv.Municipio = m.Nombre;
+                    }
+                }
+                tv.Id = t.Id;
+                tv.Nombre = t.Nombre;
+                tv.Categoria = t.Categoria;
+                tv.Disciplina = t.Disciplina;
+                tv.FechaInicial = t.FechaInicial;
+                tv.FechaFinal = t.FechaFinal;
+                TorneosView.Add(tv);
+
+            }
         }
     }
 }

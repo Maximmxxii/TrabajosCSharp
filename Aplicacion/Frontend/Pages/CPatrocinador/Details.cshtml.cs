@@ -24,7 +24,7 @@ namespace Frontend.Pages.CPatrocinador
             this._repoPat = repoPat;
         }
 
-        public ActionResult OnGet(int Id)
+        public ActionResult OnGet(int Id)//de Back a Front
         {
             Patrocinador = _repoPat.BuscarPatrocinador(Id);
             return Page();

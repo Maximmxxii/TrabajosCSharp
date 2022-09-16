@@ -13,15 +13,19 @@ namespace Frontend.Pages.CEntrenador
     {
         //atributos
         private readonly IREntrenador _repoEnt;
+        private readonly IREquipo _repoEqu;
 
         [BindProperty]
         public Entrenador Entrenador {get;set;}
+        public IEnumerable<Equipo> Equipos {get;set;}
 
         //Metodos
         //Constructor
-        public CreateModel(IREntrenador repoEnt)
+        public CreateModel(IREntrenador repoEnt, IREquipo repoEqu)
         {
             this._repoEnt = repoEnt;
+            this._repoEqu = repoEqu;
+
         }
 
         //envia informacion o nuevas vistas al usuario
@@ -35,6 +39,7 @@ namespace Frontend.Pages.CEntrenador
             //Validamos los datos que se están ingresando.
             if(!ModelState.IsValid)
             {
+                Equipos = _repoEqu.ListarEquipos();
                 return Page();
             }
 

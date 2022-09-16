@@ -4,13 +4,42 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Dominio;
+using Persistencia;
 
 namespace Frontend.Pages.CTorneo
 {
     public class DetailsModel : PageModel
     {
-        public void OnGet()
-        {
-        }
+      private readonly IRTorneo _repoTor;
+      private readonly IRMunicipio _repoMun;
+
+      [BindProperty]
+      public Torneo Torneo {get;set;}
+      public Municipio Municipio {get;set;}
+
+      public DetailsModel (IRTorneo repoTor, IRMunicipio repoMun)
+      {
+          this._repoTor = repoTor;
+          this._repoMun = repoMun;
+      }
+
+
+      public ActionResult OnGet(int Id)
+      {
+          Torneo = _repoTor.BuscarTorneo(Id);
+          
+          if (Torneo != null)           
+          {
+            Municipio = _repoMun.BuscarMunicipio(Torneo.MunicipioId); 
+            return Page();
+          }
+          else
+          {
+            ViewData["Error"] = "Registro no Encontrado";
+            return Page();
+          }
+          return Page();           
+      }
     }
 }

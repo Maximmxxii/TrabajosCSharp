@@ -13,7 +13,6 @@ namespace Dominio
         [Required(ErrorMessage="El campo NIT es Obligatorio")]
         [MaxLength(12,ErrorMessage="El campo {0} no puede tener mas de {1} Caracteres")]
         [MinLength(9,ErrorMessage="El campo {0} no puede tener menos de {1} Caracteres")]
-
         public string NIT {get; set;}
 
         [Required(ErrorMessage="El campo RazonSocial es Obligatorio")]

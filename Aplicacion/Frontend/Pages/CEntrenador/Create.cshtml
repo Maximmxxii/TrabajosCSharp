@@ -57,8 +57,30 @@
 
                  <div class="form-group">
                     <label asp-for="Entrenador.Rh" class="control-label"></label>
-                    <input asp-for="Entrenador.Rh" class="form-control" />
+                    <select asp-for="Entrenador.Rh" class="form-control">
+                        <option value="">--Seleccionar--</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
                     <span asp-validation-for="Entrenador.Rh" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.EquipoId" class="control-label"></label>
+                    <select asp-for="Entrenador.EquipoId" class="form-control">
+                        <option value="">--Seleccionar--</option>
+                    @foreach (var equi in Model.Equipos)
+                    {<!--Por medio del for recorremos todos los Equipos y traemos el nombre x cad id encontrado  -->
+                            <option value="@equi.Id"> @equi.Nombre </option>                        
+                    }
+                    </select>
+                    <span asp-validation-for="Entrenador.EquipoId" class="text-danger"> </span>
                 </div>
                 
                 <div class="form-group">

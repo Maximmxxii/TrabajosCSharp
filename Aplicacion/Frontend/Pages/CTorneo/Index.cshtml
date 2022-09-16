@@ -14,17 +14,19 @@
            <th>Nombre</th>
            <th>Categoria</th>
            <th>Disciplina</th>
+           <th>Municipio</th>
            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var tor in Model.Torneos)
+        @foreach (var tor in Model.TorneosView)//
         {
             <tr>                
                 <td>@tor.Nombre</td>
                 <td>@tor.Categoria</td>
                 <td>@tor.Disciplina</td>
-                
+                <td>@tor.Municipio</td>
+               
                 <td>
                     <a asp-page="./Edit" asp-route-id="@tor.Id" class="btn btn-info">Editar</a>
                     <a asp-page="./Details" asp-route-id="@tor.Id" class="btn btn-info">Detalles</a>

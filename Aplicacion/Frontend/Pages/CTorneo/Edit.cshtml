@@ -1,4 +1,70 @@
 ﻿@page
 @model Frontend.Pages.CTorneo.EditModel
 @{
+    ViewData["Title"]="Editar Torneo";
 }
+<h2>Editar Torneos</h2>
+<h3 class="text-danger"> @ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!--Siempre que vayamos a Editar Un dato, Debemos traer el Id, y dejarlo de manera Hidden (Oculto) para poder usarlo al actualizar! -->
+                <input type="hidden" asp-for="Torneo.Id" />
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Nombre" class="control-label"></label>
+                    <input asp-for="Torneo.Nombre" class="form-control" />
+                    <span asp-validation-for="Torneo.Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Categoria" class="control-label"></label>
+                    <input asp-for="Torneo.Categoria" class="form-control" />
+                    <span asp-validation-for="Torneo.Categoria" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Disciplina" class="control-label">  </label>
+                    <input asp-for="Torneo.Disciplina" class="form-control" />
+                    <span asp-validation-for="Torneo.Disciplina" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.FechaInicial" class="control-label">  </label>
+                    <input asp-for="Torneo.FechaInicial" class="form-control" />
+                    <span asp-validation-for="Torneo.FechaInicial" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.FechaFinal" class="control-label">  </label>
+                    <input asp-for="Torneo.FechaFinal" class="form-control" />
+                    <span asp-validation-for="Torneo.FechaFinal" class="text-danger"></span>
+                </div>         
+                <!--Este Form-Group Tendra un DropBoxList Dinamico con un recorrido por municipios del modelo y mostrandonos solo los nombres. -->
+                <div class="form-group">
+                    <label asp-for="Torneo.MunicipioId" class="control-label"></label>
+                    <select asp-for="Torneo.MunicipioId" class="form-control" >
+                        <option value="">--Seleccionar--</option>
+                        @foreach (var mun in Model.Municipios)
+                        {<!--Por medio del for recorremos todos los municipios y traemos el nombre x cad id encontrado  -->
+                            <option value="@mun.Id"> @mun.Nombre </option>
+                        }                      
+                        
+                    </select>
+                    <span asp-validation-for="Torneo.MunicipioId" class="text-danger"></span>
+                </div>       
+
+                <div class="form-group">
+                    <input type="submit" value="Editar" class="btn btn-info"  />
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

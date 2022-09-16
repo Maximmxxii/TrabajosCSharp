@@ -1,0 +1,47 @@
+﻿@page
+@model Frontend.Pages.CColegios.DetailsModel
+@{
+    ViewData["Title"] = "Detalles del Colegio";
+}
+
+<h2> Detalles del Colegio</h2>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+
+                <div class="form-group">
+                    <label asp-for="Colegio.NIT" Class="control-label"></label>
+                    <input asp-for="Colegio.NIT" Class="form-control" readonly />
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Colegio.RazonSocial" Class="control-label"></label>
+                    <input asp-for="Colegio.RazonSocial" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Telefono"  Class="control-label"></label>
+                    <input asp-for="Colegio.Telefono" Class="form-control" readonly />
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Colegio.Direccion"  Class="control-label"></label>
+                    <input asp-for="Colegio.Direccion" Class="form-control" readonly />
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Colegio.Ciudad"  Class="control-label"></label>
+                    <input asp-for="Colegio.Ciudad" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <a asp-page="Index" class="btn btn-info">Inicio</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

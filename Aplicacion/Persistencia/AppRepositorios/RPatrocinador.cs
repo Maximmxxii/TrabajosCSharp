@@ -24,19 +24,18 @@ namespace Persistencia
         {
             bool Creado = false;            
             bool Ex = Existe(patrocinador);
-            if(!Ex)
+            
+            try
             {
-                 try
-                {
-                    this._appContext.Patrocinadores.Add(patrocinador);
-                    this._appContext.SaveChanges();
-                    Creado = true;                    
-                }
-                catch (System.Exception)
-                {
-                    Creado = false;                     
-                }
+                this._appContext.Patrocinadores.Add(patrocinador);
+                this._appContext.SaveChanges();
+                Creado = true;                    
             }
+            catch (System.Exception)
+            {
+                Creado = false;                     
+            }
+            //}
             
             return Creado;
         }
@@ -79,26 +78,22 @@ namespace Persistencia
             if (pat != null)
             {
                 bool Ex = Existe(patrocinador);
-                //if(!Ex)
-                //{
-                    try
-                    {
-                        pat.Identificacion = patrocinador.Identificacion;
-                        pat.Nombre = patrocinador.Nombre;
-                        pat.Marca = patrocinador.Marca;
-                        pat.TipoPersona = patrocinador.TipoPersona;
-                        pat.Direccion = patrocinador.Direccion;
-                        pat.Telefono = patrocinador.Telefono;
-                        this._appContext.SaveChanges();
-                        Actualizado = true;
-                    }
-                    catch (System.Exception)
-                    {
-                        return Actualizado;
-                    }    
-                //}
-            }    
-            
+                try
+                {
+                    pat.Identificacion = patrocinador.Identificacion;
+                    pat.Nombre = patrocinador.Nombre;
+                    pat.Marca = patrocinador.Marca;
+                    pat.TipoPersona = patrocinador.TipoPersona;
+                    pat.Direccion = patrocinador.Direccion;
+                    pat.Telefono = patrocinador.Telefono;
+                    this._appContext.SaveChanges();
+                    Actualizado = true;
+                }
+                catch (System.Exception)
+                {
+                    return Actualizado;
+                }                    
+            }               
             return Actualizado;        
         }
 

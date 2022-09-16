@@ -27,7 +27,8 @@ namespace Persistencia
             }
              /**
              *!La instruccion Intregrated Security = True Nos conecta a la BD con nuestro usuario de Windows.
-             *///Todo este Formulario va a hacer uso del asp-validation-summary, //para hacer validaciones del modelo de data_annotations //este div se usa para validar datos (Create and Update)
+             *!este Formulario va a hacer uso del asp-validation-summary, //para hacer validaciones del modelo de data_annotations //este div se usa para validar datos (Create and Update)
+             */ 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -36,8 +37,12 @@ namespace Persistencia
             /**
              *! Se Crea este Metodo para poder asignar como llaves primarias las dos llaves foraneas que tiene la clase TorneoEquipo
              */
+
+             //Definimos un Indice Unico en esta entidad (Patrocinador)
+            modelBuilder.Entity<Patrocinador>().HasIndex(p => p.Identificacion).IsUnique();
         }
 
+       
     }
     
 }

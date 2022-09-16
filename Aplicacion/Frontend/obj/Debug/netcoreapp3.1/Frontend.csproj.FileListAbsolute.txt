@@ -194,3 +194,15 @@ F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CTorne
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CTorneo\Details.cshtml.g.cs
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CTorneo\Edit.cshtml.g.cs
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CTorneo\Index.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Index.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Create.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CColegios\Create.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CColegios\Delete.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CColegios\Edit.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CColegios\Index.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CColegios\Details.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CJuez\Create.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CJuez\Delete.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CJuez\Details.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CJuez\Edit.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CJuez\Index.cshtml.g.cs

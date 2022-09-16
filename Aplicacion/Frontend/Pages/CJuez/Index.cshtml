@@ -1,0 +1,37 @@
+﻿@page
+@model Frontend.Pages.CJuez.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de Jueces</h1>
+<p>
+    <a asp-page="Create" class="btn btn-success"> Añadir Municipio Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+           <th>Documento</th>
+           <th>Nombres</th>
+           <th>Apellidos</th> 
+           <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Jue in Model.Jueces)
+        {
+            <tr>
+                <td>@Jue.Documento</td>
+                <td>@Jue.Nombres</td>
+                <td>@Jue.Apellidos</td>
+                
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@Jue.Id" class="btn btn-info">Editar</a>
+                    <a asp-page="./Details" asp-route-id="@Jue.Id" class="btn btn-info">Detalles</a>
+                    <a asp-page="./Delete" asp-route-id="@Jue.Id" class="btn btn-danger" >Eliminar</a>                
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

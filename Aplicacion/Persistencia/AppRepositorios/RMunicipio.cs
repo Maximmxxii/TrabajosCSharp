@@ -23,20 +23,18 @@ namespace Persistencia
         public bool CrearMunicipio(Municipio municipio)
         {
             bool Creado = false;            
-            bool Ex = Existe(municipio);
-            if(!Ex)
+            
+            try
             {
-                 try
-                {
-                    this._appContext.Municipios.Add(municipio);
-                    this._appContext.SaveChanges();
-                    Creado = true;                    
-                }
-                catch (System.Exception)
-                {
-                    Creado = false;                     
-                }
+                this._appContext.Municipios.Add(municipio);
+                this._appContext.SaveChanges();
+                Creado = true;                    
             }
+            catch (System.Exception)
+            {
+                Creado = false;                     
+            }
+        
             
             return Creado;
         }
@@ -105,16 +103,7 @@ namespace Persistencia
             return _appContext.Municipios.ToList();
         }
 
-        private bool Existe(Municipio Mun)
-        {
-            bool Ex = false;
-            var muni = _appContext.Municipios.FirstOrDefault(m => m.Nombre == Mun.Nombre);
-            if (muni != null)
-            {
-                Ex = true;
-            }
-            return Ex;
-        }
+        
 
     }
 }

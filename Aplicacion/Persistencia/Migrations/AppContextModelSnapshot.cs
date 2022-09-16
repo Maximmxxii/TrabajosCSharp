@@ -165,8 +165,8 @@ namespace Persistencia.Migrations
 
                     b.Property<string>("Documento")
                         .IsRequired()
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<int>("EquipoId")
                         .HasColumnType("int");
@@ -368,6 +368,9 @@ namespace Persistencia.Migrations
                         .HasColumnType("nvarchar(40)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Identificacion")
+                        .IsUnique();
 
                     b.ToTable("Patrocinadores");
                 });

@@ -1,0 +1,83 @@
+﻿@page
+@model Frontend.Pages.CJuez.CreateModel
+@{
+    ViewData["Title"] = "Adicionar Jueces";
+}
+<h2>Adicionar Jueces</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.Documento" class="control-label"></label>
+                    <input asp-for="Juez.Documento" class="form-control" />
+                    <span asp-validation-for="Juez.Documento" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.Nombres" class="control-label"></label>
+                    <input asp-for="Juez.Nombres" class="form-control" />
+                    <span asp-validation-for="Juez.Nombres" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.Apellidos" class="control-label"></label>
+                    <input asp-for="Juez.Apellidos" class="form-control" />
+                    <span asp-validation-for="Juez.Apellidos" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.Genero" class="control-label"></label>
+                    <input asp-for="Juez.Genero" class="form-control" />
+                    <span asp-validation-for="Juez.Genero" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.ARL" class="control-label"></label>
+                    <input asp-for="Juez.ARL" class="form-control" />
+                    <span asp-validation-for="Juez.ARL" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.Celular" class="control-label"></label>
+                    <input asp-for="Juez.Celular" class="form-control" />
+                    <span asp-validation-for="Juez.Celular" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.Correo" class="control-label"></label>
+                    <input asp-for="Juez.Correo" class="form-control" />
+                    <span asp-validation-for="Juez.Correo" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Juez.TorneoId" class="control-label"></label>
+                    <select asp-for="Juez.TorneoId" class="form-control" >
+                        <option value="">--Seleccionar--</option>                        
+                    </select>
+                    <span asp-validation-for="Juez.TorneoId" class="text-danger"> </span>
+                </div>                
+
+                <div class="form-group">
+                    <label asp-for="Juez.ColegioId" class="control-label"></label>
+                    <select asp-for="Juez.ColegioId" class="form-control">
+                        <option value="">--Seleccionar--</option>
+                        
+                    </select>
+                    <span asp-validation-for="Juez.ColegioId" class="text-danger"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Crear" class="btn btn-success"/>
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

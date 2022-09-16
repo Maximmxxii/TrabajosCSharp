@@ -37,8 +37,8 @@ namespace Frontend.Pages.CTorneo
                 Municipios= _repoMun.ListarMunicipios();
                 return Page();
             }
-            bool funciono=_repoTor.CrearTorneo(Torneo);
-            if(funciono)
+            bool Funciono=_repoTor.CrearTorneo(Torneo);
+            if(Funciono)
             {
                 return RedirectToPage("./Index");
             }

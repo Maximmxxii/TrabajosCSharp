@@ -1,0 +1,37 @@
+﻿@page
+@model Frontend.Pages.CColegios.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de Colegios</h1>
+<p>
+    <a asp-page="Create" class="btn btn-success"> Añadir Colegios Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+           <th>NIT</th>
+           <th>RazonSocial</th>
+           <th>Ciudad</th> 
+           <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Col in Model.Colegios)
+        {
+            <tr>
+                <td>@Col.NIT</td>
+                <td>@Col.RazonSocial</td>
+                <td>@Col.Ciudad</td>
+                
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@Col.Id" class="btn btn-info">Editar</a>
+                    <a asp-page="./Details" asp-route-id="@Col.Id" class="btn btn-info">Detalles</a>
+                    <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@Col.Id">Eliminar</a>                
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
