@@ -18,6 +18,8 @@ namespace Persistencia
         public DbSet<Escenario> Escenarios {get;set;}
         public DbSet<Juez> Jueces {get;set;}
         public DbSet<TorneoEquipo> TorneoEquipos {get;set;}
+
+
         //Metodo para crear la BD si no Existe, con una sobrecarga      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,13 +35,24 @@ namespace Persistencia
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Asignacion de una llave primaria Compuesta de dos Llaves Foraneas 
             modelBuilder.Entity<TorneoEquipo>().HasKey(x => new{x.TorneoId, x.EquipoId});
             /**
              *! Se Crea este Metodo para poder asignar como llaves primarias las dos llaves foraneas que tiene la clase TorneoEquipo
              */
-
-             //Definimos un Indice Unico en esta entidad (Patrocinador)
+            //Definimos un Indice Unico en esta entidad (Patrocinador)
+            //Llamamos el metodo HasIndex del DBContext para que me indexe como requerido un dato de una clase. sin validar si Existe!
             modelBuilder.Entity<Patrocinador>().HasIndex(p => p.Identificacion).IsUnique();
+            modelBuilder.Entity<Deportista>().HasIndex(d => d.Documento).IsUnique();
+            modelBuilder.Entity<Municipio>().HasIndex(m => m.Nombre).IsUnique();
+         /*
+            //controlar la eliminacion en cascada
+            
+            modelBuilder.Entity<Patrocinador>()
+                .HasMany(p => p.Equipos)
+                .WithOne(e => e.PatrocinadorId)
+                .OnDelete(DeleteBehavior.Restrict);
+            */
         }
 
        

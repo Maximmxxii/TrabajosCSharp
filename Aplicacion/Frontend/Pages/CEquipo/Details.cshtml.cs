@@ -7,29 +7,30 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Dominio;
 using Persistencia;
 
-namespace Frontend.Pages.CTorneo
+
+namespace Frontend.Pages.CEquipo
 {
     public class DetailsModel : PageModel
     {
-      private readonly IRTorneo _repoTor; //Repositorios que usaremos
-      private readonly IRMunicipio _repoMun; //Repositorios que usaremos
+      private readonly IREquipo _repoEqu; //Repositorios que usaremos
+      private readonly IRPatrocinador _repoPat; //Repositorios que usaremos
 
       [BindProperty] //Propiedades Vinculadas
-      public Torneo Torneo {get;set;} // este Torneo es el que usamos en .htmlcs en: asp-for="Torneo.FechaFinal"
-      public Municipio Municipio {get;set;}
+      public Equipo Equipo {get;set;} // este Equipo es el que usamos en .htmlcs en: asp-for="Equipo.FechaFinal"
+      public Patrocinador Patrocinador {get;set;}
 
-      public DetailsModel (IRMunicipio repoMun, IRTorneo repoTor)
+      public DetailsModel (IREquipo repoEqu, IRPatrocinador repoPat)
       {
-          this._repoTor = repoTor;
-          this._repoMun = repoMun;
+          this._repoEqu = repoEqu;
+          this._repoPat = repoPat;
       }
 
       public ActionResult OnGet(int Id) // ActionResult retorna una Accion 
       {//OnGet Se encarga de mostrar, se conecta sentido back - front  y el onPost es desde desde el front hacia el back
-          Torneo = _repoTor.BuscarTorneo(Id);          
-          if (Torneo != null)           
+          Equipo = _repoEqu.BuscarEquipo(Id);          
+          if (Equipo != null)           
           {
-            Municipio = _repoMun.BuscarMunicipio(Torneo.MunicipioId); 
+            Patrocinador = _repoPat.BuscarPatrocinador(Equipo.PatrocinadorId); 
             return Page();
           }
           else

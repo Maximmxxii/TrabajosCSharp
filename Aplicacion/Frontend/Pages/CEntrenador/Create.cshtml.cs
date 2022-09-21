@@ -45,7 +45,7 @@ namespace Frontend.Pages.CEntrenador
 
             bool Funciono = _repoEnt.CrearEntrenador(Entrenador);
 
-            if(!Funciono)
+            if(Funciono)
             {
                 return RedirectToPage("./Index");
             }

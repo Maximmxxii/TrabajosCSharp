@@ -41,6 +41,7 @@ namespace Dominio
         //Llave Foranea para la relacion Con Patrocinador
         [Required(ErrorMessage="El campo PatrocinadorId es Obligatorio")]
         public int PatrocinadorId { get; set; }
+        public Patrocinador Patrocinador {get; set;}
         
         /**
         *! Propiedad Navigacional

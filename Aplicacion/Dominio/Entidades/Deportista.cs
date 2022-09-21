@@ -7,6 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dominio
 {
+    //[Index(nameof(Documento), IsUnique = true)] //Validamos que un indice sea unico y no se repita OJO asi sirve para 
+    // la version 5
     public class Deportista
     {
         //[Key]

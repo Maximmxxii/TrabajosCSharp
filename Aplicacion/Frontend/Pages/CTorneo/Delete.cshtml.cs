@@ -36,8 +36,7 @@ namespace Frontend.Pages.CTorneo
             {
                 ViewData["Error"] = "Registro no Encontrado";
                 return Page();
-            }
-            return Page();
+            }            
         }
 
         public ActionResult OnPost()

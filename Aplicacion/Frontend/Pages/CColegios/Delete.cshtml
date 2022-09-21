@@ -1,4 +1,57 @@
 ﻿@page
 @model Frontend.Pages.CColegios.DeleteModel
 @{
+    ViewData["title"] ="Eliminar Colegios";
 }
+
+<h2>Eliminar Colegios</h2>
+@if(ViewData["Error"] == null)
+{
+    <h3 class="text-danger" >Esta Seguro de Eliminar este Registro?</h3>
+}else
+{
+    <h3 class="text-danger" > @ViewData["Error"]</h3>
+}
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+
+                <input type="hidden" asp-for="Colegio.Id" />
+                
+                <div class="form-group">
+                    <label asp-for="Colegio.NIT" Class="control-label"></label>
+                    <input asp-for="Colegio.NIT" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.RazonSocial" Class="control-label"></label>
+                    <input asp-for="Colegio.RazonSocial" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Telefono" Class="control-label"></label>
+                    <input asp-for="Colegio.Telefono" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Direccion" Class="control-label"></label>
+                    <input asp-for="Colegio.Direccion" Class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Ciudad" Class="control-label"></label>
+                    <input asp-for="Colegio.Ciudad" Class="form-control" readonly />
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="Eliminar" class="btn btn-danger">
+                    <a asp-page="Index" class="btn btn-info">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

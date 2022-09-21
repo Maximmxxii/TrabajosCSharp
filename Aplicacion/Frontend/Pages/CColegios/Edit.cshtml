@@ -1,4 +1,55 @@
 ﻿@page
 @model Frontend.Pages.CColegios.EditModel
 @{
+    ViewData["Titulo"] = "Editar Colegio";
 }
+
+<h2> Editar Colegio</h2>
+<h3 class="text-danger"> @ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <!--Todo este Formulario va a hacer uso del asp-validation-summary, para hacer validaciones del modelo de data_annotations-->
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div><!--Este div se usa para validar datos (Create and Update)-->
+                <input type="hidden" asp-for="Colegio.Id" /> <!--No mostraremos el Id para que el user no lo pueda cambiar, pero debemos capturarlo! -->
+                <div class="form-group">
+                    <label asp-for="Colegio.NIT" class="control-label"></label>
+                    <input asp-for="Colegio.NIT" class="form-control" />
+                    <span asp-validation-for="Colegio.NIT" Class="text-danger"> </span><!--Para conectarlo con Validaciones (DataAnotatios) -->
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for="Colegio.RazonSocial" class="control-label"></label>
+                    <input asp-for="Colegio.RazonSocial" class="form-control" />
+                    <span asp-validation-for="Colegio.RazonSocial" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Telefono" class="control-label"></label>
+                    <input asp-for="Colegio.Telefono" class="form-control" />
+                    <span asp-validation-for="Colegio.Telefono" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Direccion" class="control-label"></label>
+                    <input asp-for="Colegio.Direccion" class="form-control" />
+                    <span asp-validation-for="Colegio.Direccion" class="text-danger"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.Ciudad" class="control-label"></label>
+                    <input asp-for="Colegio.Ciudad" class="form-control" />
+                    <span asp-validation-for="Colegio.Ciudad" class="text-danger"> </span>
+                </div>
+
+                 <div class="form-group">                    
+                    <input type="submit" value="Editar" class="btn btn-info"/>                    
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

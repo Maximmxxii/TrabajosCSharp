@@ -28,6 +28,11 @@ namespace Frontend.Pages.CTorneo
         { //Traemos todos los municipios y los guardamos en lstMunicipios
             List<Municipio> lstMunicipios= _repoMun.ListarMunicipios1();
             Torneos = _repoTor.ListarTorneos();
+            
+            /**
+            *! Con este Doble foreach recorremos municipios en la lstMunicipios y comparamos con municipioId de Torneo para asi llamar el nombre y mostrarlo
+            *! en un DropBoxList
+            */
             TorneoView tv = null;
             foreach (var t in Torneos)
             {
@@ -45,8 +50,7 @@ namespace Frontend.Pages.CTorneo
                 tv.Disciplina = t.Disciplina;
                 tv.FechaInicial = t.FechaInicial;
                 tv.FechaFinal = t.FechaFinal;
-                TorneosView.Add(tv);
-
+                TorneosView.Add(tv); //Guarda en la lista TorneosView
             }
         }
     }
