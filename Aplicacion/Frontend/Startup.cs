@@ -39,6 +39,7 @@ namespace Frontend
             services.AddScoped<IREquipo, REquipo>();
             services.AddScoped<IRColegio,RColegio>();
             services.AddScoped<IRJuez, RJuez>();
+            services.AddScoped<IRTorneoEquipo, RTorneoEquipo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

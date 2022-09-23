@@ -23,7 +23,6 @@ namespace Persistencia
         public bool CrearPatrocinador(Patrocinador patrocinador)
         {
             bool Creado = false;            
-            bool Ex = Existe(patrocinador);
             
             try
             {
@@ -76,8 +75,7 @@ namespace Persistencia
             bool Actualizado = false;
             var pat  = this._appContext.Patrocinadores.Find(patrocinador.Id);           
             if (pat != null)
-            {
-                bool Ex = Existe(patrocinador);
+            {               
                 try
                 {
                     pat.Identificacion = patrocinador.Identificacion;
@@ -106,17 +104,7 @@ namespace Persistencia
         {
             return _appContext.Patrocinadores.ToList();
         }
-
-        private bool Existe(Patrocinador patro)
-        {
-            bool Ex = false;
-            var pat = _appContext.Patrocinadores.FirstOrDefault(p => p.Identificacion == patro.Identificacion);
-            if (pat != null)
-            {
-                Ex = true;
-            }
-            return Ex;
-        }
+        
 
     }
 }

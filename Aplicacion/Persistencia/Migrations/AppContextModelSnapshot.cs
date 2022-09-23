@@ -138,6 +138,9 @@ namespace Persistencia.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Documento")
+                        .IsUnique();
+
                     b.HasIndex("EquipoId");
 
                     b.ToTable("Deportistas");
@@ -190,6 +193,9 @@ namespace Persistencia.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Documento")
+                        .IsUnique();
+
                     b.HasIndex("EquipoId")
                         .IsUnique();
 
@@ -227,6 +233,9 @@ namespace Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
 
                     b.HasIndex("PatrocinadorId");
 
@@ -329,6 +338,9 @@ namespace Persistencia.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
                     b.ToTable("Municipios");
                 });
 
@@ -410,6 +422,9 @@ namespace Persistencia.Migrations
 
                     b.HasIndex("MunicipioId");
 
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
                     b.ToTable("Torneos");
                 });
 
@@ -457,11 +472,13 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.Equipo", b =>
                 {
-                    b.HasOne("Dominio.Patrocinador", null)
+                    b.HasOne("Dominio.Patrocinador", "Patrocinador")
                         .WithMany("Equipos")
                         .HasForeignKey("PatrocinadorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Patrocinador");
                 });
 
             modelBuilder.Entity("Dominio.Escenario", b =>

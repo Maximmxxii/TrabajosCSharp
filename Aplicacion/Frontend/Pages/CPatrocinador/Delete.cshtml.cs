@@ -46,7 +46,7 @@ namespace Frontend.Pages.CPatrocinador
             }
             else
             {
-                ViewData["Error"] = "No es posible eliminar este registro";
+                ViewData["Error"] = "No es posible eliminar este registro, favor revisar su relacion con equipos";
                 return Page();
             }
         }

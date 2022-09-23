@@ -8,13 +8,11 @@ namespace Persistencia
     public class REquipo: IREquipo
     {
         /**
-        *? Atributos 
-        */
+          *? Atributos        */
         private readonly AppContext _appContext;
 
         /**
-        *? Metodos 
-        */
+          *? Metodos        */
         public REquipo(AppContext appContext)
         {
             this._appContext = appContext;
@@ -38,17 +36,14 @@ namespace Persistencia
 
         public Equipo BuscarEquipo(int Id)
         {
-            Equipo equipo = this._appContext.Equipos.Find(Id);
-
-            return equipo;            
+            return this._appContext.Equipos.Find(Id);                        
         }
 
         public bool EliminarEquipo(int Id)
-        {
+        { 
             bool Eliminado = false;
             /**
-            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.
-            */
+            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.       */
             var equi  = this._appContext.Equipos.Find(Id);
             if (equi != null)
             {
@@ -101,17 +96,5 @@ namespace Persistencia
         {
             return _appContext.Equipos.ToList();
         }
-
-        private bool Existe(Equipo Equi)
-        {
-            bool Ex = false;
-            var torne = _appContext.Equipos.FirstOrDefault(e => e.Nombre == Equi.Nombre);
-            if (torne != null)
-            {
-                Ex = true;
-            }
-            return Ex;
-        }
-
     }
 }

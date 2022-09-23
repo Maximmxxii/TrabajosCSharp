@@ -22,17 +22,15 @@ namespace Persistencia
 
         public bool CrearEntrenador(Entrenador entrenador)
         {
-            bool Creado = false;            
-            bool Ex = Existe(entrenador);
-            if(!Ex)
+            bool Creado = false;           
             {
-                 try
+                try
                 {
                     this._appContext.Entrenadores.Add(entrenador);
                     this._appContext.SaveChanges();
                     Creado = true;                    
                 }
-                catch (System.Exception)
+                catch (Exception)
                 {
                     Creado = false;                     
                 }
@@ -43,17 +41,14 @@ namespace Persistencia
 
         public Entrenador BuscarEntrenador(int Id)
         {
-            Entrenador entrenador = this._appContext.Entrenadores.Find(Id);
-
-            return entrenador;            
+             return  this._appContext.Entrenadores.Find(Id);                        
         }
 
         public bool EliminarEntrenador(int Id)
         {
             bool Eliminado = false;
             /**
-            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.
-            */
+            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.            */
             var entre  = this._appContext.Entrenadores.Find(Id);            
             if (entre != null)
             {
@@ -77,31 +72,27 @@ namespace Persistencia
             bool Actualizado = false;
             var entre  = this._appContext.Entrenadores.Find(entrenador.Id);           
             if (entre != null)
-            {
-                bool Ex = Existe(entrenador);
-                //if(!Ex)
-                //{
-                    try
-                    {
-                        entre.Documento = entrenador.Documento;
-                        entre.Nombres = entrenador.Nombres;
-                        entre.Apellidos = entrenador.Apellidos;
-                        entre.Genero = entrenador.Genero;
-                        entre.Celular = entrenador.Celular;
-                        entre.Correo = entrenador.Correo;
-                        entre.Nacionalidad = entrenador.Nacionalidad;
-                        entre.Rh = entrenador.Rh;
-                        entre.EquipoId = entrenador.EquipoId;                        
-                        this._appContext.SaveChanges();
-                        Actualizado = true;
-                    }
-                    catch (System.Exception)
-                    {
-                        return Actualizado;
-                    }    
-                //}
-            }    
+            {                
+                try
+                {                    
+                    entre.Documento = entrenador.Documento;
+                    entre.Nombres = entrenador.Nombres;
+                    entre.Apellidos = entrenador.Apellidos;
+                    entre.Genero = entrenador.Genero;
+                    entre.Celular = entrenador.Celular;
+                    entre.Correo = entrenador.Correo;
+                    entre.Nacionalidad = entrenador.Nacionalidad;
+                    entre.Rh = entrenador.Rh;
+                    entre.EquipoId = entrenador.EquipoId;                        
+                    this._appContext.SaveChanges();
+                    Actualizado = true;
+                }
+                catch (System.Exception)
+                {
+                    return Actualizado;
+                }    
             
+            }                
             return Actualizado;        
         }
 
@@ -113,18 +104,6 @@ namespace Persistencia
         public List<Entrenador> ListarEntrenadores1()
         {
             return _appContext.Entrenadores.ToList();
-        }
-
-        private bool Existe(Entrenador Entre)
-        {
-            bool Ex = false;
-            var entre = _appContext.Entrenadores.FirstOrDefault(e => e.Documento == Entre.Documento);
-            if (entre != null)
-            {
-                Ex = true;
-            }
-            return Ex;
-        }
-
+        }       
     }
 }

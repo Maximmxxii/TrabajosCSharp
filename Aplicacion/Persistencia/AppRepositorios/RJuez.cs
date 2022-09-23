@@ -8,13 +8,11 @@ namespace Persistencia
     public class RJuez: IRJuez
     {
          /**
-        *? Atributos 
-        */
+        *? Atributos         */
         private readonly AppContext _appContext;
 
         /**
-        *? Metodos 
-        */
+        *? Metodos         */
         public RJuez(AppContext appContext)
         {
             this._appContext = appContext;
@@ -42,7 +40,6 @@ namespace Persistencia
         public Juez BuscarJuez(int Id)
         {
             Juez juez = this._appContext.Jueces.Find(Id);
-
             return juez;            
         }
 
@@ -50,8 +47,7 @@ namespace Persistencia
         {
             bool Eliminado = false;
             /**
-            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.
-            */
+            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.            */
             var jue  = this._appContext.Jueces.Find(Id);
             if (jue != null)
             {

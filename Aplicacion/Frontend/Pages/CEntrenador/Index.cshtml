@@ -14,21 +14,23 @@
            <th>Documento</th>
            <th>Nombres</th>
            <th>Apellidos</th> 
+           <th>Equipo</th> 
            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var entre in Model.Entrenadores)
+        @foreach (var entre in Model.EntrenadoresView)
         {
             <tr>
                 <td>@entre.Documento</td>
                 <td>@entre.Nombres</td>
                 <td>@entre.Apellidos</td>
+                <td>@entre.Equipo</td>
                 
                 <td>
                     <a asp-page="./Edit" asp-route-id="@entre.Id" class="btn btn-info">Editar</a>
                     <a asp-page="./Details" asp-route-id="@entre.Id" class="btn btn-info">Detalles</a>
-                    <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@entre.Id">Eliminar</a>                
+                    <a asp-page="./Delete" asp-route-id="@entre.Id" class="btn btn-danger" >Eliminar</a>                
                 </td>
             </tr>
         }

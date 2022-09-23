@@ -16,7 +16,7 @@ namespace Frontend.Pages.CEquipo
 
         [BindProperty]
         public IEnumerable<Equipo> Equipos {get;set;}
-        //public List<TorneoView> TorneosView = new List<TorneosView>();
+        public List<EquipoView> EquiposView = new List<EquipoView>();
 
         public IndexModel(IREquipo repoEqu, IRPatrocinador repoPat)
         {
@@ -28,6 +28,23 @@ namespace Frontend.Pages.CEquipo
         {
             List<Patrocinador> lstPatrocinadores = _repoPat.ListarPatrocinadores1();
             Equipos = _repoEqu.ListarEquipos();
+            EquipoView ev = null;
+            foreach (var e in Equipos)
+            {
+                ev = new EquipoView();
+                foreach (var p in lstPatrocinadores)
+                {
+                    if (e.PatrocinadorId == p.Id)
+                    {
+                        ev.Patrocinador = p.Nombre;
+                    }                     
+                }
+                ev.Id = e.Id;
+                ev.Nombre = e.Nombre;                
+                ev.Disciplina = e.Disciplina;               
+                EquiposView.Add(ev); //Guarda en la lista EquiposView
+                
+            }
         }
     }
 }

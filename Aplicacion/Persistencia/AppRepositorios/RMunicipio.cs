@@ -55,16 +55,21 @@ namespace Persistencia
             var muni  = this._appContext.Municipios.Find(Id);
             if (muni != null)
             {
-                try
+                var torneo = _appContext.Torneos.FirstOrDefault(t=> t.MunicipioId == muni.Id);
+                if (torneo == null)
                 {
-                    this._appContext.Municipios.Remove(muni);
-                    this._appContext.SaveChanges();
-                    Eliminado = true;
+                   try
+                   {
+                        this._appContext.Municipios.Remove(muni);
+                        this._appContext.SaveChanges();
+                        Eliminado = true;
+                   }
+                   catch (System.Exception)
+                   {
+                        Eliminado = false;
+                   }     
                 }
-                catch (System.Exception)
-                {
-                    Eliminado = false;
-                }
+                
                 
             }
             return Eliminado;

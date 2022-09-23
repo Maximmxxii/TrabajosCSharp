@@ -209,3 +209,4 @@ F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CJuez\
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Details.cshtml.g.cs
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Edit.cshtml.g.cs
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Delete.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CInscribirEquipo\Index.cshtml.g.cs

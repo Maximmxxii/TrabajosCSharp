@@ -50,6 +50,7 @@ namespace Dominio
         public string Rh { get; set; }
 
         //LLave Foranea De relacion con Municipio
+        [Required(ErrorMessage="El campo Rh es Obligatorio")]   
         public int EquipoId { get; set; }
     }
 }

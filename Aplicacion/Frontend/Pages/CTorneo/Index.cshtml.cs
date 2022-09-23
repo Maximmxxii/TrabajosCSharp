@@ -34,6 +34,7 @@ namespace Frontend.Pages.CTorneo
             *! en un DropBoxList
             */
             TorneoView tv = null;
+            
             foreach (var t in Torneos)
             {
                 tv = new TorneoView();

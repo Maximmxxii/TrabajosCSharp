@@ -12,20 +12,18 @@
     <thead>
         <tr>
            <th>Nombre</th>
-           <th>Disciplina</th>
-           <th>Ciudad</th>
-           <th>Categoria</th>
+           <th>Disciplina</th>   
+           <th>Patrocinador</th>
            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var equi in Model.Equipos)
+        @foreach (var equi in Model.EquiposView)
         {
             <tr>                
                 <td>@equi.Nombre</td>
                 <td>@equi.Disciplina</td>
-                <td>@equi.Ciudad</td>
-                <td>@equi.Categoria</td>
+                <td>@equi.Patrocinador</td>              
                 
                 <td>
                     <a asp-page="./Edit" asp-route-id="@equi.Id" class="btn btn-info">Editar</a>

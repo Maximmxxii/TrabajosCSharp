@@ -31,6 +31,7 @@ namespace Frontend.Pages.CEntrenador
         //envia informacion o nuevas vistas al usuario
         public ActionResult  OnGet()
         {
+            Equipos = _repoEqu.ListarEquipos();
             return Page();
         }
 
@@ -51,7 +52,8 @@ namespace Frontend.Pages.CEntrenador
             }
             else
             {
-                ViewData["Error"] =("Ya existe un Entrenador con esa Identificacion: " + Entrenador.Documento);    
+                Equipos = _repoEqu.ListarEquipos();
+                ViewData["Error"] =("los campos Documento y Equipo no se pueden repetir");    
                 return Page();            
             }
         }        

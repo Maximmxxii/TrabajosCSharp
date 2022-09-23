@@ -45,14 +45,16 @@ namespace Persistencia
             modelBuilder.Entity<Patrocinador>().HasIndex(p => p.Identificacion).IsUnique();
             modelBuilder.Entity<Deportista>().HasIndex(d => d.Documento).IsUnique();
             modelBuilder.Entity<Municipio>().HasIndex(m => m.Nombre).IsUnique();
-         /*
-            //controlar la eliminacion en cascada
-            
+            modelBuilder.Entity<Equipo>().HasIndex(e => e.Nombre).IsUnique();
+            modelBuilder.Entity<Entrenador>().HasIndex(ent => ent.Documento).IsUnique();
+            modelBuilder.Entity<Torneo>().HasIndex(t => t.Nombre).IsUnique();
+         
+            //controlar la eliminacion en cascada            
             modelBuilder.Entity<Patrocinador>()
                 .HasMany(p => p.Equipos)
-                .WithOne(e => e.PatrocinadorId)
+                .WithOne(e => e.Patrocinador)
                 .OnDelete(DeleteBehavior.Restrict);
-            */
+            
         }
 
        
