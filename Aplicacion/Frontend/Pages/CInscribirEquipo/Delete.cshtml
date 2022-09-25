@@ -1,0 +1,46 @@
+﻿@page
+@model Frontend.Pages.CInscribirEquipo.DeleteModel
+@{
+    ViewData["Title"]="Eliminar Torneo";
+}
+<h2>Eliminar Equipos del Torneos</h2>
+@if(ViewData["Error"] == null)
+{
+    <h3 class="text-danger" >Esta Seguro de Eliminar el equipo del Torneo?</h3>
+}else
+{
+    <h3 class="text-danger" > @ViewData["Error"]</h3>
+}
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">             
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <!--Siempre que vayamos a eliminar Un dato, Debemos traer el Id, y dejarlo de manera Hidden (Oculto) para poder usarlo. -->
+                <input type="hidden" asp-for="TorneoEquipo.TorneoId"/>
+                <input type="hidden" asp-for="TorneoEquipo.EquipoId"/>
+                
+                <div class="form-group">
+                    <label asp-for="Torneo.Nombre" class="control-label"></label>
+                    <input asp-for="Torneo.Nombre" class="form-control" readonly/>
+                    <span asp-validation-for="Torneo.Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Equipo.Nombre" class="control-label"></label>
+                    <input asp-for="Equipo.Nombre" class="form-control" readonly/>
+                    <span asp-validation-for="Equipo.Nombre" class="text-danger"></span>                 
+                </div>               
+
+                <div class="form-group">
+                    <input type="submit" value="Retirar Equipo" class="btn btn-info"/>
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

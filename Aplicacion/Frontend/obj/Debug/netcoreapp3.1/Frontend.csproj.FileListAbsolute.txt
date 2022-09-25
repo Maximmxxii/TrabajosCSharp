@@ -210,3 +210,7 @@ F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquip
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Edit.cshtml.g.cs
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CEquipo\Delete.cshtml.g.cs
 F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CInscribirEquipo\Index.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CInscribirEquipo\Create.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CInscribirEquipo\Delete.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CDeportista\Index.cshtml.g.cs
+F:\TrabajosCSharp\Aplicacion\Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\CDeportista\Create.cshtml.g.cs

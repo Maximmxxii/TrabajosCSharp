@@ -5,16 +5,14 @@ using System;
 
 namespace Persistencia
 {
-    public class REntrenador: IREntrenador
+    public class REntrenador:IREntrenador
     {
         /**
-        *? Atributos 
-        */
+        *? Atributos */
         private readonly AppContext _appContext;
 
         /**
-        *? Metodos 
-        */
+        *? Metodos         */
         public REntrenador(AppContext appContext)
         {
             this._appContext = appContext;
@@ -48,7 +46,7 @@ namespace Persistencia
         {
             bool Eliminado = false;
             /**
-            *? La variable var toma el tipo de dato que le asignen, var muni = "hola"; se volveria String muni.            */
+            *? La variable var toma el tipo de dato que le asignen, var entre = "hola"; se volveria String entre.            */
             var entre  = this._appContext.Entrenadores.Find(Id);            
             if (entre != null)
             {
@@ -61,8 +59,7 @@ namespace Persistencia
                 catch (System.Exception)
                 {
                     Eliminado = false;
-                }
-                
+                }                
             }
             return Eliminado;
         }
@@ -70,20 +67,21 @@ namespace Persistencia
         public bool ActualizarEntrenador(Entrenador entrenador)
         {
             bool Actualizado = false;
-            var entre  = this._appContext.Entrenadores.Find(entrenador.Id);           
-            if (entre != null)
+
+            var entrena  = this._appContext.Entrenadores.Find(entrenador.Id);                 
+            if (entrena != null)
             {                
                 try
                 {                    
-                    entre.Documento = entrenador.Documento;
-                    entre.Nombres = entrenador.Nombres;
-                    entre.Apellidos = entrenador.Apellidos;
-                    entre.Genero = entrenador.Genero;
-                    entre.Celular = entrenador.Celular;
-                    entre.Correo = entrenador.Correo;
-                    entre.Nacionalidad = entrenador.Nacionalidad;
-                    entre.Rh = entrenador.Rh;
-                    entre.EquipoId = entrenador.EquipoId;                        
+                    entrena.Documento = entrenador.Documento;
+                    entrena.Nombres = entrenador.Nombres;
+                    entrena.Apellidos = entrenador.Apellidos;
+                    entrena.Genero = entrenador.Genero;
+                    entrena.Celular = entrenador.Celular;
+                    entrena.Correo = entrenador.Correo;
+                    entrena.Nacionalidad = entrenador.Nacionalidad;
+                    entrena.Rh = entrenador.Rh;
+                    entrena.EquipoId = entrenador.EquipoId;                        
                     this._appContext.SaveChanges();
                     Actualizado = true;
                 }

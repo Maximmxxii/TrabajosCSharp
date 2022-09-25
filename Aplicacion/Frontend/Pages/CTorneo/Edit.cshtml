@@ -53,8 +53,7 @@
                         @foreach (var mun in Model.Municipios)
                         {<!--Por medio del for recorremos todos los municipios y traemos el nombre x cad id encontrado  -->
                             <option value="@mun.Id"> @mun.Nombre </option>
-                        }                      
-                        
+                        }
                     </select>
                     <span asp-validation-for="Torneo.MunicipioId" class="text-danger"></span>
                 </div>       

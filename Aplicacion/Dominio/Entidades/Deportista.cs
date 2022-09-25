@@ -34,6 +34,7 @@ namespace Dominio
         [Required(ErrorMessage="El campo Fecha De Nacimiento es Obligatorio")]
         [MaxLength(10,ErrorMessage="El campo {0} no puede tener mas de {1} Caracteres")]
         [MinLength(9,ErrorMessage="El campo {0} no puede tener menos de {1} Caracteres")]
+        [DataType(DataType.Date)]
         public DateTime FechaNacimiento  { get; set; }
         
         [Required(ErrorMessage="El campo EPS es Obligatorio")]

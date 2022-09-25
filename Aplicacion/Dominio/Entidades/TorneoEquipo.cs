@@ -8,7 +8,9 @@ namespace Dominio
     public class TorneoEquipo
     {
         //Llave primaria compuesta
+        [Required(ErrorMessage="El campo {0} es Obligatorio")]
         public int TorneoId { get; set; }
+        [Required(ErrorMessage="El campo {0} es Obligatorio")]
         public int EquipoId { get; set; }
 
         // Propiedad Navigacionales

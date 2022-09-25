@@ -1,4 +1,89 @@
 ﻿@page
 @model Frontend.Pages.CEntrenador.EditModel
 @{
+    ViewData["Title"]="Editar Entrenador";
 }
+<h2>Editar Entrenador</h2>
+<h3 class="text-danger"> @ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!--Siempre que vayamos a Editar Un dato, Debemos traer el Id, y dejarlo de manera Hidden (Oculto) para poder usarlo al actualizar! -->
+                <input type="hidden" asp-for="Entrenador.Id" />
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Documento" class="control-label"></label>
+                    <input asp-for="Entrenador.Documento" class="form-control" />
+                    <span asp-validation-for="Entrenador.Documento" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Nombres" class="control-label"></label>
+                    <input asp-for="Entrenador.Nombres" class="form-control" />
+                    <span asp-validation-for="Entrenador.Nombres" class="text-danger"></span>
+                </div>                
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Apellidos" class="control-label">  </label>
+                    <input asp-for="Entrenador.Apellidos" class="form-control" />
+                    <span asp-validation-for="Entrenador.Apellidos" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Genero" class="control-label">  </label>
+                    <input asp-for="Entrenador.Genero" class="form-control" />
+                    <span asp-validation-for="Entrenador.Genero" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Celular" class="control-label">  </label>
+                    <input asp-for="Entrenador.Celular" class="form-control" />
+                    <span asp-validation-for="Entrenador.Celular" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Correo" class="control-label">  </label>
+                    <input asp-for="Entrenador.Correo" class="form-control" />
+                    <span asp-validation-for="Entrenador.Correo" class="text-danger"></span>
+                </div> 
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Nacionalidad" class="control-label">  </label>
+                    <input asp-for="Entrenador.Nacionalidad" class="form-control" />
+                    <span asp-validation-for="Entrenador.Nacionalidad" class="text-danger"></span>
+                </div> 
+
+                <div class="form-group">
+                    <label asp-for="Entrenador.Rh" class="control-label">  </label>
+                    <input asp-for="Entrenador.Rh" class="form-control" />
+                    <span asp-validation-for="Entrenador.Rh" class="text-danger"></span>
+                </div> 
+
+                <!--Este Form-Group Tendra un DropBoxList Dinamico con un recorrido por Equipos del modelo y mostrandonos solo los nombres. -->
+                <div class="form-group">
+                    <label asp-for="Entrenador.EquipoId" class="control-label"></label>
+                    <select asp-for="Entrenador.EquipoId" class="form-control" >
+                        <option value="">--Seleccionar--</option>
+                        @foreach (var equi in Model.Equipos)
+                        {<!--Por medio del for recorremos todos los Equipos y traemos el nombre x cad id encontrado  -->
+                            <option value="@equi.Id"> @equi.Nombre </option>
+                        }
+                    </select>
+                    <span asp-validation-for="Entrenador.EquipoId" class="text-danger"></span>
+                </div>       
+
+                <div class="form-group">
+                    <input type="submit" value="Editar" class="btn btn-info"  />
+                    <a asp-page="Index" class="btn btn-danger">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
